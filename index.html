@@ -1,23 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Picture This!</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Picture This!</title>
-  <link rel="stylesheet" href="style.css">
-</head>
+  <body>
+    <header class="header">
+      <div class="title">
+        <h1>Picture This!</h1>
+        <h4>My Really Cool Blog Post</h4>
+      </div>
+      <picture>
+        <!-- Square Image -->
 
-<body>
-  <header class="header">
-    <div class="title">
-      <h1>Picture This!</h1>
-      <h4>My Really Cool Blog Post</h4>
-    </div>
-    <img src="images/museum.jpg" alt="placeholder">
+        <source
+          srcset="
+            images/museum-800x800.jpg,
+            images/museum-1600x1600.jpg 2x,
+            images/museum-2400x2400.jpg 3x
+          "
+          media="(min-width: 1600px)"
+        />
 
-  </header>
-</body>
+        <source
+          srcset="
+            images/museum-640x640.jpg,
+            images/museum-1280x1280.jpg 2x,
+            images/museum-1920x1920.jpg 3x
+          "
+          media="(min-width: 1280px)"
+        />
 
+        <source
+          srcset="
+            images/museum-480x480.jpg,
+            images/museum-960x960.jpg   2x,
+            images/museum-1440x1440.jpg 3x
+          "
+          media="(min-width: 960px)"
+        />
+
+        <!-- Landscape Image -->
+        <source
+          srcset="
+            images/museum-320x180.jpg,
+            images/museum-640x360.jpg 2x,
+            images/museum-960x540.jpg 3x
+          "
+          media="(max-width: 320px)"
+        />
+
+        <source
+          srcset="
+            images/museum-480x270.jpg,
+            images/museum-960x540.jpg  2x,
+            images/museum-1440x810.jpg 3x
+          "
+          media="(max-width: 480px)"
+        />
+
+        <source
+          srcset="
+            images/museum-720x405.jpg,
+            images/museum-1440x810.jpg  2x,
+            images/museum-2160x1215.jpg 3x
+          "
+          media="(max-width: 720px)"
+        />
+
+        <source
+          srcset="
+            images/museum-960x540.jpg,
+            images/museum-1920x1080.jpg 2x,
+            images/museum-2880x1621.jpg 3x
+          "
+          media="(max-width: 960px)"
+        />
+
+        <img src="images/museum.jpg" alt="museum" />
+      </picture>
+    </header>
+  </body>
 </html>
